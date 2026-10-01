@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Siswa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <h1>LOGIN</h1>
+            <p>Sistem Data Siswa</p>
+
+            <div class="input-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Masukkan username"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Masukkan password"
+                >
+
+            </div>
+
+
+            <button
+                class="login-button"
+                onclick="login()"
+            >
+                LOGIN
+            </button>
+
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HALAMAN DATA ================= -->
+
+    <div id="dataPage" class="data-page">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-left">
+
+                <h1>DATA SISWA</h1>
+
+                <p>
+                    Sistem Informasi Data Siswa
+                </p>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()"
+            >
+                LOGOUT
+            </button>
+
+        </header>
+
+
+        <!-- ================= FORM DATA ================= -->
+
+        <section class="form-container">
+
+            <h2>Entry Data Siswa</h2>
+
+            <p class="form-description">
+                Masukkan data siswa. Baris tabel akan muncul otomatis.
+            </p>
+
+
+            <div class="form-grid">
+
+                <!-- NIS -->
+
+                <div class="form-group">
+
+                    <label for="nis">
+                        NIS
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nis"
+                        placeholder="Masukkan NIS"
+                    >
+
+                </div>
+
+
+                <!-- NAMA -->
+
+                <div class="form-group">
+
+                    <label for="nama">
+                        Nama Siswa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama siswa"
+                    >
+
+                </div>
+
+
+                <!-- KELAS -->
+
+                <div class="form-group">
+
+                    <label for="kelas">
+                        Kelas
+                    </label>
+
+                    <select id="kelas">
+
+                        <option value="">
+                            Pilih Kelas
+                        </option>
+
+                        <optgroup label="Kelas X">
+
+                            <option value="X RPL 1">
+                                X RPL 1
+                            </option>
+
+                            <option value="X RPL 2">
+                                X RPL 2
+                            </option>
+
+                            <option value="X TKJ 1">
+                                X TKJ 1
+                            </option>
+
+                            <option value="X TKJ 2">
+                                X TKJ 2
+                            </option>
+
+                            <option value="X AKL 1">
+                                X AKL 1
+                            </option>
+
+                            <option value="X AKL 2">
+                                X AKL 2
+                            </option>
+
+                            <option value="X TKR 1">
+                                X TKR 1
+                            </option>
+
+                            <option value="X TKR 2">
+                                X TKR 2
+                            </option>
+
+                            <option value="X TBSM 1">
+                                X TBSM 1
+                            </option>
+
+                            <option value="X TBSM 2">
+                                X TBSM 2
+                            </option>
+
+                            <option value="X MPLB 1">
+                                X MPLB 1
+                            </option>
+
+                            <option value="X MPLB 2">
+                                X MPLB 2
+                            </option>
+
+                            <option value="X DKV 1">
+                                X DKV 1
+                            </option>
+
+                            <option value="X DKV 2">
+                                X DKV 2
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Kelas XI">
+
+                            <option value="XI RPL 1">
+                                XI RPL 1
+                            </option>
+
+                            <option value="XI RPL 2">
+                                XI RPL 2
+                            </option>
+
+                            <option value="XI TKJ 1">
+                                XI TKJ 1
+                            </option>
+
+                            <option value="XI TKJ 2">
+                                XI TKJ 2
+                            </option>
+
+                            <option value="XI AKL 1">
+                                XI AKL 1
+                            </option>
+
+                            <option value="XI AKL 2">
+                                XI AKL 2
+                            </option>
+
+                            <option value="XI TKR 1">
+                                XI TKR 1
+                            </option>
+
+                            <option value="XI TKR 2">
+                                XI TKR 2
+                            </option>
+
+                            <option value="XI TBSM 1">
+                                XI TBSM 1
+                            </option>
+
+                            <option value="XI TBSM 2">
+                                XI TBSM 2
+                            </option>
+
+                            <option value="XI MPLB 1">
+                                XI MPLB 1
+                            </option>
+
+                            <option value="XI MPLB 2">
+                                XI MPLB 2
+                            </option>
+
+                            <option value="XI DKV 1">
+                                XI DKV 1
+                            </option>
+
+                            <option value="XI DKV 2">
+                                XI DKV 2
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Kelas XII">
+
+                            <option value="XII RPL 1">
+                                XII RPL 1
+                            </option>
+
+                            <option value="XII RPL 2">
+                                XII RPL 2
+                            </option>
+
+                            <option value="XII TKJ 1">
+                                XII TKJ 1
+                            </option>
+
+                            <option value="XII TKJ 2">
+                                XII TKJ 2
+                            </option>
+
+                            <option value="XII AKL 1">
+                                XII AKL 1
+                            </option>
+
+                            <option value="XII AKL 2">
+                                XII AKL 2
+                            </option>
+
+                            <option value="XII TKR 1">
+                                XII TKR 1
+                            </option>
+
+                            <option value="XII TKR 2">
+                                XII TKR 2
+                            </option>
+
+                            <option value="XII TBSM 1">
+                                XII TBSM 1
+                            </option>
+
+                            <option value="XII TBSM 2">
+                                XII TBSM 2
+                            </option>
+
+                            <option value="XII MPLB 1">
+                                XII MPLB 1
+                            </option>
+
+                            <option value="XII MPLB 2">
+                                XII MPLB 2
+                            </option>
+
+                            <option value="XII DKV 1">
+                                XII DKV 1
+                            </option>
+
+                            <option value="XII DKV 2">
+                                XII DKV 2
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+
+                <!-- JURUSAN -->
+
+                <div class="form-group">
+
+                    <label for="jurusan">
+                        Jurusan
+                    </label>
+
+                    <select id="jurusan">
+
+                        <option value="">
+                            Pilih Jurusan
+                        </option>
+
+                        <option value="RPL">
+                            RPL
+                        </option>
+
+                        <option value="TKJ">
+                            TKJ
+                        </option>
+
+                        <option value="AKL">
+                            AKL
+                        </option>
+
+                        <option value="TKR">
+                            TKR
+                        </option>
+
+                        <option value="TBSM">
+                            TBSM
+                        </option>
+
+                        <option value="MPLB">
+                            MPLB
+                        </option>
+
+                        <option value="DKV">
+                            DKV
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- NILAI -->
+
+                <div class="form-group">
+
+                    <label for="nilai">
+                        Nilai
+                    </label>
+
+                    <input
+                        type="number"
+                        id="nilai"
+                        min="0"
+                        max="100"
+                        placeholder="0 - 100"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <div class="button-group">
+
+                <button
+                    id="tombolData"
+                    class="tambah-button"
+                    onclick="tambahSiswa()"
+                >
+                    TAMBAH DATA
+                </button>
+
+
+                <button
+                    class="save-button"
+                    onclick="simpanData()"
+                >
+                    SAVE DATA
+                </button>
+
+
+                <button
+                    class="excel-button"
+                    onclick="exportExcel()"
+                >
+                    EXPORT EXCEL
+                </button>
+
+
+                <button
+                    class="print-button"
+                    onclick="cetakData()"
+                >
+                    CETAK DATA
+                </button>
+
+
+                <button
+                    class="batal-button"
+                    onclick="batalEdit()"
+                >
+                    BATAL
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TABEL ================= -->
+
+        <section class="table-container">
+
+            <div class="table-header">
+
+                <div>
+
+                    <h2>
+                        Daftar Data Siswa
+                    </h2>
+
+                    <p>
+                        Data akan muncul otomatis setelah entry.
+                    </p>
+
+                </div>
+
+
+                <div class="jumlah-data">
+
+                    Jumlah Data:
+
+                    <strong id="jumlahData">
+                        0 / 50
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>NIS</th>
+
+                            <th>Nama</th>
+
+                            <th>Kelas</th>
+
+                            <th>Jurusan</th>
+
+                            <th>Nilai</th>
+
+                            <th>Status</th>
+
+                            <th class="kolom-aksi">
+                                Aksi
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelSiswa"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- ================= SHEETJS ================= -->
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+
+    <!-- JAVASCRIPT SENDIRI -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

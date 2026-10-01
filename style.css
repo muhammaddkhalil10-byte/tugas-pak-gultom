@@ -1,0 +1,703 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    color: #222;
+}
+
+
+/* ==========================================
+   LOGIN
+========================================== */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+}
+
+
+.login-box {
+    width: 380px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.2);
+
+    text-align: center;
+}
+
+
+.login-box h1 {
+    margin-bottom: 10px;
+}
+
+
+.login-box > p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   INPUT LOGIN
+========================================== */
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+
+.input-group input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.login-button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.login-button:hover {
+    background: #1d4ed8;
+}
+
+
+#loginMessage {
+    margin-top: 15px;
+
+    color: #dc2626;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   DATA PAGE
+========================================== */
+
+.data-page {
+    display: none;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+    background: #1e3a8a;
+
+    color: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.header-left h1 {
+    margin-bottom: 5px;
+}
+
+
+.header-left p {
+    opacity: 0.85;
+}
+
+
+.logout-button {
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.logout-button:hover {
+    background: #b91c1c;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-container {
+    background: white;
+
+    margin: 25px 40px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.form-container h2 {
+    margin-bottom: 8px;
+}
+
+
+.form-description {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    background: white;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.button-group {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.button-group button {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* TAMBAH */
+
+.tambah-button {
+    background: #2563eb;
+}
+
+
+.tambah-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* SAVE */
+
+.save-button {
+    background: #16a34a;
+}
+
+
+.save-button:hover {
+    background: #15803d;
+}
+
+
+/* EXCEL */
+
+.excel-button {
+    background: #16803c;
+}
+
+
+.excel-button:hover {
+    background: #11632f;
+}
+
+
+/* PRINT */
+
+.print-button {
+    background: #7c3aed;
+}
+
+
+.print-button:hover {
+    background: #6d28d9;
+}
+
+
+/* BATAL */
+
+.batal-button {
+    background: #64748b;
+}
+
+
+.batal-button:hover {
+    background: #475569;
+}
+
+
+/* ==========================================
+   TABLE CONTAINER
+========================================== */
+
+.table-container {
+    background: white;
+
+    margin: 25px 40px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+}
+
+
+.table-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.table-header p {
+    color: #666;
+
+    margin-top: 5px;
+}
+
+
+.jumlah-data {
+    font-size: 15px;
+}
+
+
+.jumlah-data strong {
+    color: #2563eb;
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 800px;
+}
+
+
+thead {
+    background: #1e3a8a;
+
+    color: white;
+}
+
+
+th,
+td {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+}
+
+
+th {
+    font-weight: bold;
+}
+
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+tbody tr:hover {
+    background: #eef2ff;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.lulus {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+
+.tidak-lulus {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   EDIT & HAPUS
+========================================== */
+
+.edit-button,
+.hapus-button {
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    margin-right: 5px;
+}
+
+
+.edit-button {
+    background: #f59e0b;
+}
+
+
+.edit-button:hover {
+    background: #d97706;
+}
+
+
+.hapus-button {
+    background: #dc2626;
+}
+
+
+.hapus-button:hover {
+    background: #b91c1c;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: flex-start;
+    }
+
+
+    .form-container,
+    .table-container {
+        margin: 15px;
+
+        padding: 18px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .table-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+
+        margin: 15mm;
+    }
+
+
+    body {
+        background: white;
+    }
+
+
+    .login-page {
+        display: none !important;
+    }
+
+
+    .header {
+        display: none !important;
+    }
+
+
+    .form-container {
+        display: none !important;
+    }
+
+
+    .button-group {
+        display: none !important;
+    }
+
+
+    .kolom-aksi {
+        display: none !important;
+    }
+
+
+    .table-container {
+        margin: 0;
+
+        padding: 0;
+
+        box-shadow: none;
+
+        border-radius: 0;
+    }
+
+
+    .table-header {
+        display: block;
+
+        margin-bottom: 15px;
+    }
+
+
+    .table-header h2 {
+        font-size: 20px;
+    }
+
+
+    .table-header p {
+        display: none;
+    }
+
+
+    .jumlah-data {
+        margin-top: 5px;
+    }
+
+
+    table {
+        min-width: 0;
+
+        width: 100%;
+
+        font-size: 11px;
+    }
+
+
+    th,
+    td {
+        padding: 7px;
+
+        border: 1px solid #000;
+    }
+
+
+    thead {
+        background: #ddd !important;
+
+        color: black !important;
+    }
+
+
+    tbody tr:nth-child(even) {
+        background: white;
+    }
+
+
+    .lulus,
+    .tidak-lulus {
+        padding: 0;
+
+        background: none;
+
+        color: black;
+    }
+
+}
